@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
-dotenv.config();
 
 // Add CORS middleware
 const cors = require('cors');
