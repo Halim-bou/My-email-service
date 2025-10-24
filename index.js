@@ -14,7 +14,10 @@ const brevo = new SibApiV3Sdk.TransactionalEmailsApi();
 brevo.setApiKey(SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'bouaami.el@gmail.com';
 
-// Helper to send emails via Brevo
+
+console.log('🚨 BREVO API KEY:', process.env.BREVO_API_KEY ? '✅ loaded' : '❌ missing');
+console.log('🚨 ADMIN EMAIL:', process.env.ADMIN_EMAIL ? '✅ loaded' : '❌ missing');
+
 async function sendMail(options) {
   try {
     const { from, to, subject, html, text, replyTo } = options;
