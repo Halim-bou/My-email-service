@@ -227,7 +227,7 @@ app.post('/send-contact', async (req, res) => {
         // Email to YOU (the admin/website owner)
         const adminMailOptions = {
             from: 'portfolioangee@gmail.com',
-            to: 'portfolioangee@gmail.com', // Send to yourself
+            to: 'angeekomanoconstruction@gmail.com', // Send to yourself
             replyTo: email, // Allow easy reply to the user
             subject: `Nouvelle soumission du formulaire de contact: ${subject || 'Sans objet'}`,
             html: `
