@@ -306,7 +306,7 @@ app.post('/send-contact', async (req, res) => {
                     
                         <div style="border-top: 1px solid #ecf0f1; padding-top: 20px; margin-top: 30px;">
                             <p style="color: #7f8c8d; margin: 0;">Cordialement,</p>
-                            <p style="color: #2c3e50; font-weight: bold; margin: 5px 0 0 0;">Votre équipe</p>
+                            <p style="color: #2c3e50; font-weight: bold; margin: 5px 0 0 0;">Angee Komano</p>
                         </div>
                     </div>
                 </div>`
