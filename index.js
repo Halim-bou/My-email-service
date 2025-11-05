@@ -42,7 +42,7 @@ app.get('/send-candidature/:email/:id', async (req, res) => {
     }
 
     const mailOptions = {
-        from: 'bouaami.el@gmail.com',
+        from: 'portfolioangee6@gmail.com',
         to: recipientEmail,
         subject: 'Confirmation de soumission de candidature',
         text: `Bonjour,
@@ -329,10 +329,18 @@ app.post('/send-contact', async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Contact form error:', error);
+        console.error('❌ Contact form error:', {
+            message: error?.message,
+            code: error?.code,
+            response: error?.response,
+            responseCode: error?.responseCode,
+            command: error?.command,
+            stack: error?.stack
+        });
         res.status(500).json({
             success: false,
-            error: 'Failed to send message. Please try again later.'
+            error: 'Failed to send message. Please try again later.',
+            details: error?.message // Remove this in production
         });
     }
 });
